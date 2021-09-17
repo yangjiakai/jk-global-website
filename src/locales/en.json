@@ -1,0 +1,114 @@
+{
+  "message": "你好 i18n !!",
+  "routes": {
+    "home": "home",
+    "productPrice": "product price",
+    "about": "about us",
+    "business": "business",
+    "contactUs": "contact us"
+  },
+  "home":{
+    "title1":"Creating a world ",
+    "title2":"of trust and peace of mind",
+    "subTitle":"We want to leave a blue planet for our future children. That is our wish.",
+    "buy":{
+      "title":"Purchase support",
+      "subTitle":"We can handle anything that is cycleable. Please feel free to contact us."
+    }
+  },
+
+  "companyProfile": {
+    "title":"companyInfo",
+    "label": {
+      "name": "companyName",
+      "represenative": "Represenative",
+      "founded": "Founded on",
+      "location": "Location",
+      "contact": "Contact Us",
+      "business": "Our Businesss",
+      "banks": "Main Banks"
+    },
+    "content": {
+      "name": "KANKYUE BOEKI CO.LED",
+      "represenative": "Akito Tokida,CEO",
+      "founded": "August 2009",
+      "location": "Location",
+      "contact": "TEL:+81-013-309-8666/FAX +81-043-309-864",
+      "business": "Sell recyclabe resources",
+      "banks": "The CHiba Bank.Ltd,The keiyo Bank.Ltd"
+    }
+  },
+  "greetings": {
+    "title":"Greeting",
+    "subTitle": "To Create Comfortable Society and Revitalize Communities",
+    "content": "By reducing waste through non-ferrous metal recycling,we are contributing to the global environment protection,as a company with the advantages for both clients who remove waste and who need resources\nWe will continue to work together as one,striving to be a company loved by clients and communities\nWe will greatly appreciate our supporter"
+  },
+  "business": {
+    "buy": {
+      "title": "buy",
+      "content": "We are based in Chiba City and handing different types of scrap like iron and metal,home appliances and batteries. We look forward to seeting you even if you use our services for the first time.if you have any questions.please feel free to ask us.",
+      "process": {
+        "inquery": {
+          "title": "Inquery",
+          "content": "Please contact us by telephone or visiting our office"
+        },
+        "bring": {
+          "title": "Bring waste",
+          "content": "You can bring waste to us during business hours on weekdays and Saturdays"
+        },
+        "weight": {
+          "title": "Weight waste",
+          "content": "After unloading,we weight the waste again"
+        },
+        "payment": {
+          "title": "Payment",
+          "content": "we calculate price based on the weight"
+        }
+      }
+    },
+    "export": {
+      "title": "Export",
+      "content": "We have gradually increased the amount of export and import of scrap and are exporting to 5bases(China,South Korea,Africa,Thailand,Malaysia).Wehave a deep connection with various selling,buying,and export routes inside and outside Japan.ThereFore,we can engage in all buisiness such as buying scarp an exporting by outselves.We alse offer import and export services.",
+      "factories": {
+        "title": "Overseas Factories",
+        "China": "China",
+        "Africa": "Africa",
+        "Thailand": "Thailand",
+        "Malaysia": "Mayaysia"
+      }
+    },
+    "takeApart": {
+      "title": "Take Apart",
+      "content": "We need to take apart and sort waste for each metal to recycle.We produce each recycled raw ,aterial,actively fpcusing on recycling.for remaining a sustainable socieaty to th next generations",
+      "material": {
+
+        "iron": "Iron Metal",
+        "noIron": "Non-ferrous metal",
+        "al": "Aluminum",
+        "plastic": "Waste plastic"
+      }
+    },
+    "recycle": {
+      "title": "buy",
+      "content": "Even though we recaim and incinerate waste in Japan,just by sorting and dismanting it,there are wags to put sparkle into it in other countries.We hope to utilize the limited sources in new palaces again.We alse hope to support a circulating society not only in Japan,but alse in the world",
+      "process": {
+        "title": "Process for recycling",
+        "step1": {
+          "title": "Buy old steel scrap"
+        },
+        "step2": {
+          "title": "Sort it"
+        },
+        "step3": {
+          "title": "Process it"
+        },
+        "step4": {
+          "title": "Reuse as a product material"
+        },
+        "step5": {
+          "title": "Recycled products"
+        }
+      }
+    }
+  }
+}
