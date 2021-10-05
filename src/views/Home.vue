@@ -11,7 +11,7 @@
       <div class="mask"></div>
       <v-container class="main-container">
         <v-row>
-          <v-col cols="12" md="8" offset="1" offset-md="2">
+          <v-col cols="12" md="8" offset-md="2">
             <div>
               <h1
                 class="
@@ -26,7 +26,7 @@
           </v-col>
         </v-row>
         <v-row>
-          <v-col cols="12" md="8" offset="1" offset-md="2">
+          <v-col cols="12" md="8" offset-md="2">
             <div>
               <h1
                 class="

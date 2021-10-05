@@ -9,9 +9,9 @@
     </div>
     <v-container>
       <v-row>
-        <v-col cols="12" sm="3" lg="3" class="sticky-position">
-          <v-sheet rounded="lg" width="100%">
-            <v-list shaped class="sticky-position">
+        <v-col cols="12" sm="3" lg="3">
+          <v-sheet rounded="lg" width="100%" style="z-index: 999">
+            <v-list shaped>
               <v-subheader>商品種類</v-subheader>
               <v-list-item-group v-model="selectedItem" color="primary">
                 <v-list-item @click="anchorJump('#copper-metals')">

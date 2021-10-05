@@ -6,28 +6,13 @@
       :color="appBarColor"
       height="80"
       style="border-bottom: 3px solid #565656"
-      elevate-on-scroll
     >
       <v-btn icon x-large @click.stop="drawer = !drawer">
         <v-icon>mdi-view-list</v-icon>
       </v-btn>
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          height="40"
-          contain
-          class="shrink mr-2 d-block d-md-none"
-          src="@/assets/logo.jpg"
-        />
-        <v-img
-          alt="Vuetify Logo"
-          contain
-          class="shrink mr-2 d-none d-md-block"
-          src="@/assets/logo.jpg"
-        />
-      </div>
+      <v-img src="@/assets/logo.jpg" height="60" width="60" contain></v-img>
+      <v-toolbar-title>環球貿易株式会社</v-toolbar-title>
       <v-spacer></v-spacer>
-      <i18n class="mr-10"></i18n>
     </v-app-bar>
     <v-app-bar
       fixed
