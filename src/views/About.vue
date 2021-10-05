@@ -31,7 +31,7 @@
               <tr>
                 <td>本社所在地</td>
                 <td class="py-2">
-                  〒〒266-0003
+                  〒266-0003
                   <br />千葉県千葉市緑区高田町1658
                   <br />TEL:043-309-8666<br />FAX:043-309-8645
                 </td>
@@ -44,13 +44,13 @@
           <template v-slot:default>
             <tbody>
               <tr>
-                <td width="25%">代表取締役会長兼社長</td>
+                <td width="25%">代表取締役</td>
                 <td>常田 瑛仁</td>
               </tr>
             </tbody>
           </template>
         </v-simple-table>
-        <h4 class="sub-title mt-10">事業者</h4>
+        <h4 class="sub-title mt-10">事業所</h4>
         <v-simple-table>
           <template v-slot:default>
             <tbody>
@@ -92,9 +92,24 @@
           </template>
         </v-simple-table>
 
-        <h1 class="main-title mt-15">事業所マップ</h1>
+        <h1 class="main-title mt-15">本社マップ</h1>
         <v-card>
-          <v-img src="../assets/images/map.png" width="100%"></v-img>
+          <GmapMap
+            :center="{ lat: 35.560719, lng: 140.2132905 }"
+            :zoom="15"
+            :options="{ streetViewControl: false }"
+            map-type-id="roadmap"
+            style="width: 100%; height: 700px"
+          >
+            <GmapMarker
+              :key="index"
+              v-for="(m, index) in markers"
+              :position="m.position"
+              :clickable="true"
+              @click="center = m.position"
+            />
+          </GmapMap>
+          <!-- <v-img src="../assets/images/map.png" width="100%"></v-img> -->
         </v-card>
       </v-container>
     </v-sheet>
@@ -105,7 +120,7 @@
 export default {
   name: "videoBg",
   data() {
-    return {};
+    return { markers: [{ position: { lat: 35.5607191, lng: 140.2132905 } }] };
   },
 
   components: {},

@@ -22,21 +22,20 @@
                     <v-list-item-title>銅スクラップ</v-list-item-title>
                   </v-list-item-content>
                 </v-list-item>
-                <v-list-item @click="anchorJump('#iron-metals')">
-                  <v-list-item-icon>
-                    <v-icon>mdi-flag</v-icon>
-                  </v-list-item-icon>
-                  <v-list-item-content>
-                    <v-list-item-title>鉄スクラップ</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-
                 <v-list-item @click="anchorJump('#none-metals')">
                   <v-list-item-icon>
                     <v-icon>mdi-flag</v-icon>
                   </v-list-item-icon>
                   <v-list-item-content>
                     <v-list-item-title>非鉄スクラップ</v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+                <v-list-item @click="anchorJump('#iron-metals')">
+                  <v-list-item-icon>
+                    <v-icon>mdi-flag</v-icon>
+                  </v-list-item-icon>
+                  <v-list-item-content>
+                    <v-list-item-title>鉄スクラップ</v-list-item-title>
                   </v-list-item-content>
                 </v-list-item>
               </v-list-item-group>
@@ -84,15 +83,14 @@
                 </v-hover>
               </v-col>
             </v-row>
-            <h1
-              id="iron-metals"
-              class="text-center main-title text-h5 font-weight-bold my-5"
-            >
-              鉄スクラップ
+
+            <v-divider id="none-metals" class="my-divider"></v-divider>
+            <h1 class="text-center main-title text-h5 font-weight-bold my-5">
+              非鉄スクラップ
             </h1>
             <v-row>
               <v-col
-                v-for="item in ironMetals"
+                v-for="item in nonMetals"
                 :key="item.index"
                 cols="12"
                 md="6"
@@ -122,11 +120,12 @@
                 </v-hover>
               </v-col>
             </v-row>
+            <v-divider id="none-metals" class="my-divider"></v-divider>
             <h1
-              id="none-metals"
+              id="iron-metals"
               class="text-center main-title text-h5 font-weight-bold my-5"
             >
-              非鉄スクラップ
+              鉄スクラップ
             </h1>
             <v-row>
               <v-col
@@ -208,7 +207,7 @@ export default {
       easing: "easeInOutCubic",
       page: 1,
       overlay: false,
-      selectedItem: 1,
+      selectedItem: 0,
 
       copperMetals: [
         {
@@ -247,6 +246,8 @@ export default {
           imgUrl: require("../assets/images/metal/水道メーター.jpg"),
           titleJp: "水道メーター",
         },
+      ],
+      nonMetals: [
         {
           imgUrl: require("../assets/images/metal/エアコン.jpg"),
           titleJp: "エアコン",
@@ -341,7 +342,7 @@ export default {
     anchorJump(id) {
       const anchorEle = document.querySelector(id);
       if (anchorEle) {
-        anchorEle.scrollIntoView(true);
+        anchorEle.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     },
   },
@@ -367,7 +368,16 @@ img {
 }
 
 .main-title {
+  padding: 25px 10px;
+  margin-bottom: 10px;
+  font-size: 17px;
+  background: #f0f0f0;
+
   border-left: 5px solid #3971cc;
   color: #3971cc;
+}
+
+.my-divider {
+  margin: 110px 0;
 }
 </style>

@@ -89,8 +89,11 @@
                   :elevation="hover ? 16 : 2"
                   :class="{ 'on-hover': hover }"
                 >
-                  <h3 class="card-title py-5">鉄スクラップ</h3>
-                  <v-img src="../assets/images/metal/板.jpg" height="400">
+                  <h3 class="card-title py-5">非鉄スクラップ</h3>
+                  <v-img
+                    src="../assets/images/metal/雑線（VA）.jpg"
+                    height="400"
+                  >
                   </v-img>
                   <v-fade-transition>
                     <v-overlay v-if="hover" absolute color="rgba(44,55,83,.8)">
@@ -101,7 +104,6 @@
               </router-link>
             </v-hover>
           </v-col>
-
           <v-col cols="12" md="4">
             <v-hover v-slot="{ hover }" open-delay="200">
               <router-link to="/productPrice">
@@ -109,11 +111,8 @@
                   :elevation="hover ? 16 : 2"
                   :class="{ 'on-hover': hover }"
                 >
-                  <h3 class="card-title py-5">非鉄スクラップ</h3>
-                  <v-img
-                    src="../assets/images/metal/雑線（VA）.jpg"
-                    height="400"
-                  >
+                  <h3 class="card-title py-5">鉄スクラップ</h3>
+                  <v-img src="../assets/images/metal/板.jpg" height="400">
                   </v-img>
                   <v-fade-transition>
                     <v-overlay v-if="hover" absolute color="rgba(44,55,83,.8)">
