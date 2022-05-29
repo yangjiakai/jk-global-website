@@ -11,27 +11,6 @@
     <v-divider></v-divider>
     <v-card max-width="1200" class="mx-auto mt-5">
       <v-container>
-        <h1 class="main-title mb-5">投資関連</h1>
-        <v-row>
-          <v-col cols="12" md="6">
-            <v-card class="ml-md-3">
-              <v-img
-                height="400"
-                src="../assets/images/環球/business.jpg"
-              ></v-img>
-            </v-card>
-          </v-col>
-          <v-col cols="12" md="6">
-            <v-card class="mr-md-3">
-              <v-img
-                src="../assets/images/環球/business1.jpg"
-                height="400"
-                cover
-              ></v-img>
-            </v-card>
-          </v-col>
-        </v-row>
-
         <h1 class="main-title mt-5">お問い合わせ</h1>
         <v-row>
           <v-col cols="12">

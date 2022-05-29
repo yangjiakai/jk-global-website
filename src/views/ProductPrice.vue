@@ -45,10 +45,10 @@
 
         <v-col cols="12" sm="9" lg="9">
           <v-sheet rounded="lg" class="pa-5" elevation="3" max-width="1200">
-            <h1
-              id="cooper-metals"
-              class="text-center main-title text-h5 font-weight-bold"
-            >
+            <v-card id="cooper-metals" class="my-5">
+              <v-img src="../assets/images/products/scrap2.png"></v-img>
+            </v-card>
+            <h1 class="text-center main-title text-h5 font-weight-bold">
               銅スクラップ
             </h1>
             <v-row>
@@ -83,8 +83,7 @@
                 </v-hover>
               </v-col>
             </v-row>
-
-            <v-divider id="none-metals" class="my-divider"></v-divider>
+            <v-card height="100" id="none-metals" class="mt-5"> </v-card>
             <h1 class="text-center main-title text-h5 font-weight-bold my-5">
               非鉄スクラップ
             </h1>
@@ -120,11 +119,8 @@
                 </v-hover>
               </v-col>
             </v-row>
-            <v-divider id="none-metals" class="my-divider"></v-divider>
-            <h1
-              id="iron-metals"
-              class="text-center main-title text-h5 font-weight-bold my-5"
-            >
+            <v-card height="100" id="iron-metals" class="mt-5"> </v-card>
+            <h1 class="text-center main-title text-h5 font-weight-bold my-5">
               鉄スクラップ
             </h1>
             <v-row>
@@ -211,124 +207,124 @@ export default {
 
       copperMetals: [
         {
-          imgUrl: require("../assets/images/metal/ピカ線.jpg"),
+          imgUrl: require("../assets/images/metal/copper_img1.jpg"),
           titleJp: "ピカ線・ピカ銅",
         },
         {
-          imgUrl: require("../assets/images/metal/並銅.jpg"),
+          imgUrl: require("../assets/images/metal/copper_img2.jpg"),
           titleJp: "並銅",
         },
         {
-          imgUrl: require("../assets/images/metal/上銅.jpg"),
+          imgUrl: require("../assets/images/metal/copper_img3.jpg"),
           titleJp: "上銅",
         },
         {
-          imgUrl: require("../assets/images/metal/込銅.jpg"),
+          imgUrl: require("../assets/images/metal/copper_img4.jpg"),
           titleJp: "込銅",
         },
         {
-          imgUrl: require("../assets/images/metal/砲金.jpg"),
+          imgUrl: require("../assets/images/metal/copper_img5.jpg"),
           titleJp: "砲金",
         },
         {
-          imgUrl: require("../assets/images/metal/込砲金.jpg"),
+          imgUrl: require("../assets/images/metal/copper_img6.jpg"),
           titleJp: "込砲金（バルブ砲金）",
         },
         {
-          imgUrl: require("../assets/images/metal/真鍮ラジエーター.jpg"),
+          imgUrl: require("../assets/images/metal/copper_img7.jpg"),
           titleJp: "真鍮",
         },
         {
-          imgUrl: require("../assets/images/metal/込真鍮.jpg"),
+          imgUrl: require("../assets/images/metal/copper_img8.jpg"),
           titleJp: "込真鍮",
         },
         {
-          imgUrl: require("../assets/images/metal/水道メーター.jpg"),
+          imgUrl: require("../assets/images/metal/copper_img9.jpg"),
           titleJp: "水道メーター",
         },
       ],
       nonMetals: [
         {
-          imgUrl: require("../assets/images/metal/エアコン.jpg"),
+          imgUrl: require("../assets/images/metal/nonMetal1.jpg"),
           titleJp: "エアコン",
         },
         {
-          imgUrl: require("../assets/images/metal/GHP工業エアコン.jpg"),
+          imgUrl: require("../assets/images/metal/nonMetal2.jpg"),
           titleJp: "GHP工業エアコン",
         },
         {
-          imgUrl: require("../assets/images/metal/給湯器.jpg"),
+          imgUrl: require("../assets/images/metal/nonMetal3.jpg"),
           titleJp: "給湯器",
         },
         {
-          imgUrl: require("../assets/images/metal/ラジエーター.jpg"),
+          imgUrl: require("../assets/images/metal/nonMetal4.jpg"),
           titleJp: "ラジエター",
         },
         {
-          imgUrl: require("../assets/images/metal/黒モーター.jpg"),
+          imgUrl: require("../assets/images/metal/nonMetal5.jpg"),
           titleJp: "黒モーター",
         },
         {
-          imgUrl: require("../assets/images/metal/電車モーター.jpg"),
+          imgUrl: require("../assets/images/metal/nonMetal6.jpg"),
           titleJp: "モーター",
         },
         {
-          imgUrl: require("../assets/images/metal/並銅.jpg"),
-          titleJp: "並銅",
+          imgUrl: require("../assets/images/metal/nonMetal7.jpg"),
+          titleJp: "ステンレス(鉄なし）",
         },
         {
-          imgUrl: require("../assets/images/metal/銅芯トランス.jpg"),
+          imgUrl: require("../assets/images/metal/nonMetal8.jpg"),
           titleJp: "銅芯トランス",
         },
         {
-          imgUrl: require("../assets/images/metal/配電盤.jpg"),
+          imgUrl: require("../assets/images/metal/nonMetal9.jpg"),
           titleJp: "配電盤",
         },
         {
-          imgUrl: require("../assets/images/metal/工業雑品.jpg"),
+          imgUrl: require("../assets/images/metal/nonMetal10.jpg"),
           titleJp: "工業雑品",
         },
         {
-          imgUrl: require("../assets/images/metal/家電雑品.jpg"),
+          imgUrl: require("../assets/images/metal/nonMetal11.jpg"),
           titleJp: "家電雑品",
         },
         {
-          imgUrl: require("../assets/images/metal/アルミ.jpg"),
+          imgUrl: require("../assets/images/metal/nonMetal12.jpg"),
           titleJp: "アルミ",
         },
         {
-          imgUrl: require("../assets/images/metal/一本線.jpg"),
+          imgUrl: require("../assets/images/metal/nonMetal13.jpg"),
           titleJp: "一本線（銅率80%）",
         },
         {
-          imgUrl: require("../assets/images/metal/三本線.jpg"),
+          imgUrl: require("../assets/images/metal/nonMetal14.jpg"),
           titleJp: "三本線（銅率65%）",
         },
         {
-          imgUrl: require("../assets/images/metal/車のハーネス.jpg"),
+          imgUrl: require("../assets/images/metal/nonMetal15.jpg"),
           titleJp: "車のハーネス",
         },
         {
-          imgUrl: require("../assets/images/metal/雑線（VA）.jpg"),
+          imgUrl: require("../assets/images/metal/nonMetal16.jpg"),
           titleJp: "雑線（VA)",
         },
         {
-          imgUrl: require("../assets/images/metal/家電線.jpg"),
+          imgUrl: require("../assets/images/metal/nonMetal17.jpg"),
           titleJp: "家電線（コード線）",
         },
         {
-          imgUrl: require("../assets/images/metal/パイプ（皮付）.jpg"),
+          imgUrl: require("../assets/images/metal/nonMetal18.jpg"),
           titleJp: "パイプ（皮付）",
         },
       ],
 
       ironMetals: [
         {
-          imgUrl: require("../assets/images/metal/鉄スクラップ.jpg"),
+          imgUrl: require("../assets/images/metal/ironMetal1.png"),
           titleJp: "鉄スクラップ",
         },
         {
-          imgUrl: require("../assets/images/metal/板.jpg"),
+          imgUrl: require("../assets/images/metal/ironMetal2.png"),
           titleJp: "敷鉄板",
         },
       ],
@@ -336,7 +332,12 @@ export default {
   },
   components: {},
   computed: {},
-
+  mounted() {
+    if (this.$route.params.id) {
+      console.log(this.$route.params.id);
+      this.anchorJump(this.$route.params.id);
+    }
+  },
   created() {},
   methods: {
     anchorJump(id) {
@@ -372,7 +373,6 @@ img {
   margin-bottom: 10px;
   font-size: 17px;
   background: #f0f0f0;
-
   border-left: 5px solid #3971cc;
   color: #3971cc;
 }

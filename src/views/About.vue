@@ -91,26 +91,27 @@
             </tbody>
           </template>
         </v-simple-table>
+        <h4 class="sub-title mt-10">設備</h4>
 
-        <h1 class="main-title mt-15">本社マップ</h1>
-        <v-card>
-          <GmapMap
-            :center="{ lat: 35.560719, lng: 140.2132905 }"
-            :zoom="15"
-            :options="{ streetViewControl: false }"
-            map-type-id="roadmap"
-            style="width: 100%; height: 700px"
-          >
-            <GmapMarker
-              :key="index"
-              v-for="(m, index) in markers"
-              :position="m.position"
-              :clickable="true"
-              @click="center = m.position"
-            />
-          </GmapMap>
-          <!-- <v-img src="../assets/images/map.png" width="100%"></v-img> -->
-        </v-card>
+        <v-simple-table>
+          <template v-slot:default>
+            <tbody>
+              <tr>
+                <td width="25%">設備</td>
+                <td class="py-2">
+                  建設機械 10台（0.25 x 1台0.45 x 2台0.7 x 5台0.9 x 2台）
+                  <br />フォークリフト 12台（2.5t x 4台、3.0t x 6台、3.5 x 2台）
+                  <br />大型トレーラ 17台 <br />10ｔ大型深ダンプ 2台
+                  <br />4tアームロール 1台 <br />プレス機 3台（大型 x 1台、小型
+                  x 2台） <br />大型破砕機 1台 <br />成分分析機 1機
+                  <br />プラズマ切断機 1台 <br />電線カッター 2機 <br />営業車
+                  5台 <br />小型放射能測定器 1機 <br />60t大型台貫 2台
+                  <br />5t小型台貫 2台 <br />剥線機 3台
+                </td>
+              </tr>
+            </tbody>
+          </template>
+        </v-simple-table>
       </v-container>
     </v-sheet>
   </div>
@@ -120,7 +121,7 @@
 export default {
   name: "videoBg",
   data() {
-    return { markers: [{ position: { lat: 35.5607191, lng: 140.2132905 } }] };
+    return { markers: [{ position: { lat: 35.5715784, lng: 140.2238246 } }] };
   },
 
   components: {},

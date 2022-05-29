@@ -2,10 +2,12 @@
   "message": "你好 i18n !!",
   "routes": {
     "home": "ホーム",
-    "productPrice": "買取価格",
-    "about": "会社概要",
-    "business": "事業内容",
-    "contactUs": "投資関連"
+    "productPrice": "スクラップ買取",
+    "about": "会社情報",
+    "business": "事業案内",
+    "contactUs": "お問い合わせ",
+    "group": "グループ事業",
+    "invest": "投資関連"
   },
   "home": {
     "title1": "最後の'ひとかけら'まで",

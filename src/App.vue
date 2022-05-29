@@ -49,7 +49,15 @@
           color="primary"
           class="text-body-1"
           text
-          to="/about"
+          to="/businessNav"
+          >{{ $t("routes.business") }}</v-btn
+        >
+        <v-btn
+          width="150"
+          color="primary"
+          class="text-body-1"
+          text
+          to="/companyNav"
           >{{ $t("routes.about") }}</v-btn
         >
         <v-btn
@@ -60,6 +68,14 @@
           to="/productPrice"
           >{{ $t("routes.productPrice") }}
         </v-btn>
+        <v-btn
+          width="150"
+          color="primary"
+          class="text-body-1"
+          text
+          to="/groupNav"
+          >{{ $t("routes.group") }}</v-btn
+        >
         <!-- <v-btn width="150" color="primary" class="text-body-1" text to="/business">{{ $t('routes.business') }}</v-btn> -->
         <v-btn
           width="150"
@@ -68,6 +84,14 @@
           text
           to="/contact"
           >{{ $t("routes.contactUs") }}</v-btn
+        >
+        <v-btn
+          width="150"
+          color="primary"
+          class="text-body-1"
+          text
+          to="/invest"
+          >{{ $t("routes.invest") }}</v-btn
         >
       </v-toolbar-items>
       <v-spacer></v-spacer>
@@ -90,7 +114,15 @@
             <v-list-item-title>{{ $t("routes.home") }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item link to="/about">
+        <v-list-item link to="/businessNav">
+          <v-list-item-icon>
+            <v-icon>mdi-view-dashboard</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>{{ $t("routes.business") }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item link to="/companyNav">
           <v-list-item-icon>
             <v-icon>mdi-view-dashboard</v-icon>
           </v-list-item-icon>
@@ -106,6 +138,14 @@
             <v-list-item-title>{{
               $t("routes.productPrice")
             }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item link to="/groupNav">
+          <v-list-item-icon>
+            <v-icon>mdi-view-dashboard</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>{{ $t("routes.group") }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <!-- <v-list-item link to="/business">
@@ -124,6 +164,14 @@
             <v-list-item-title>{{ $t("routes.contactUs") }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+        <v-list-item link to="/invest">
+          <v-list-item-icon>
+            <v-icon>mdi-view-dashboard</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>{{ $t("routes.invest") }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
 
@@ -133,69 +181,16 @@
 
     <v-divider class="mt-10"></v-divider>
     <v-footer color="rgba(253,252,250)">
-      <v-container grid-list-xs>
-        <v-row class="text-center">
-          <v-col cols="12" md="3">
-            <v-btn
-              width="120"
-              color="primary"
-              class="text-body-1"
-              text
-              to="/"
-              >{{ $t("routes.home") }}</v-btn
-            >
-          </v-col>
-          <v-col cols="12" md="3">
-            <v-btn
-              width="120"
-              color="primary"
-              class="text-body-1"
-              text
-              to="/about"
-              >{{ $t("routes.about") }}</v-btn
-            >
-          </v-col>
-          <v-col cols="12" md="3">
-            <v-btn
-              width="120"
-              color="primary"
-              class="text-body-1"
-              text
-              to="/productPrice"
-            >
-              {{ $t("routes.productPrice") }}
-            </v-btn>
-          </v-col>
-          <!-- <v-col cols="12" md="2">
-            <v-btn width="120" color="primary" class="text-body-1" text to="/business">{{ $t('routes.business') }}
-            </v-btn>
-          </v-col> -->
-          <v-col cols="12" md="3">
-            <v-btn
-              width="120"
-              color="primary"
-              class="text-body-1"
-              text
-              to="/contact"
-              >{{ $t("routes.contactUs") }}
-            </v-btn>
-          </v-col>
-        </v-row>
-        <v-divider class="my-6"></v-divider>
-        <v-row justify="center" class="text-center">
-          <v-col cols="12">
-            <p class="text-button grey--text">
-              COPYRIGHT © KANKYU TRADE CO.,LTD All rights reserved.
-            </p>
-          </v-col>
-        </v-row>
-      </v-container>
+      <v-card flat class="mx-auto" width="1200">
+        <FooterMenu />
+      </v-card>
     </v-footer>
   </v-app>
 </template>
 
 <script>
 import I18n from "./components/I18n";
+import FooterMenu from "./components/FooterMenu";
 
 export default {
   name: "App",
@@ -231,6 +226,7 @@ export default {
   }),
   components: {
     I18n,
+    FooterMenu,
   },
 
   methods: {},
@@ -245,14 +241,18 @@ export default {
 
 /* Bannner Style */
 .banner-warp {
-  background-image: url("./assets/images/環球/買取4.jpg");
+  background-image: url("./assets/images/環球/company_img4.jpg");
   background-position: center center;
   background-size: cover;
   height: 400px;
 }
 
 .mask {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
   height: 400px;
+}
+
+a {
+  text-decoration: none;
 }
 </style>

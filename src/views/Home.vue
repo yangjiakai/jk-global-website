@@ -46,6 +46,7 @@
         </v-row>
       </v-container>
     </v-card>
+    <NavGroup />
     <v-row class="fixed-bg2" no-gutters>
       <v-col>
         <v-card
@@ -53,7 +54,7 @@
           color="rgba(255,255,255,1)"
           class="d-flex flex-column align-center justify-center"
         >
-          <h1 class="text-h2 font-weight-bold">買取対応</h1>
+          <h1 class="text-h3 font-weight-bold">買取対応</h1>
           <p class="text-center mt-8">{{ $t("home.buy.subTitle") }}</p>
         </v-card>
       </v-col>
@@ -65,17 +66,28 @@
         <v-row>
           <v-col cols="12" md="4">
             <v-hover v-slot="{ hover }" open-delay="200">
-              <router-link to="/productPrice">
+              <router-link
+                :to="{ name: 'ProductPrice', params: { id: '#cooper-metals' } }"
+              >
                 <v-card
                   :elevation="hover ? 16 : 2"
                   :class="{ 'on-hover': hover }"
                 >
                   <h3 class="card-title py-5">銅スクラップ</h3>
-                  <v-img src="../assets/images/metal/並銅.jpg" height="400">
+                  <v-img
+                    src="../assets/images/metal/copper_img2.jpg"
+                    height="400"
+                  >
                   </v-img>
                   <v-fade-transition>
                     <v-overlay v-if="hover" absolute color="rgba(44,55,83,.8)">
-                      <v-btn to="/productPrice">詳しく</v-btn>
+                      <v-btn
+                        :to="{
+                          name: 'ProductPrice',
+                          params: { id: '#cooper-metals' },
+                        }"
+                        >詳しく</v-btn
+                      >
                     </v-overlay>
                   </v-fade-transition>
                 </v-card>
@@ -84,20 +96,28 @@
           </v-col>
           <v-col cols="12" md="4">
             <v-hover v-slot="{ hover }" open-delay="200">
-              <router-link to="/productPrice">
+              <router-link
+                :to="{ name: 'ProductPrice', params: { id: '#none-metals' } }"
+              >
                 <v-card
                   :elevation="hover ? 16 : 2"
                   :class="{ 'on-hover': hover }"
                 >
                   <h3 class="card-title py-5">非鉄スクラップ</h3>
                   <v-img
-                    src="../assets/images/metal/雑線（VA）.jpg"
+                    src="../assets/images/metal/nonMetal17.jpg"
                     height="400"
                   >
                   </v-img>
                   <v-fade-transition>
                     <v-overlay v-if="hover" absolute color="rgba(44,55,83,.8)">
-                      <v-btn to="/productPrice">詳しく</v-btn>
+                      <v-btn
+                        :to="{
+                          name: 'ProductPrice',
+                          params: { id: '#none-metals' },
+                        }"
+                        >詳しく</v-btn
+                      >
                     </v-overlay>
                   </v-fade-transition>
                 </v-card>
@@ -106,17 +126,25 @@
           </v-col>
           <v-col cols="12" md="4">
             <v-hover v-slot="{ hover }" open-delay="200">
-              <router-link to="/productPrice">
+              <router-link
+                :to="{ name: 'ProductPrice', params: { id: '#iron-metals' } }"
+              >
                 <v-card
                   :elevation="hover ? 16 : 2"
                   :class="{ 'on-hover': hover }"
                 >
                   <h3 class="card-title py-5">鉄スクラップ</h3>
-                  <v-img src="../assets/images/metal/板.jpg" height="400">
+                  <v-img src="../assets/images/nav/iron.png" height="400">
                   </v-img>
                   <v-fade-transition>
                     <v-overlay v-if="hover" absolute color="rgba(44,55,83,.8)">
-                      <v-btn to="/productPrice">詳しく</v-btn>
+                      <v-btn
+                        :to="{
+                          name: 'ProductPrice',
+                          params: { id: '#iron-metals' },
+                        }"
+                        >詳しく</v-btn
+                      >
                     </v-overlay>
                   </v-fade-transition>
                 </v-card>
@@ -127,7 +155,7 @@
       </v-card>
     </v-container>
 
-    <v-row class="fixed-bg2 mt-5" no-gutters>
+    <!-- <v-row class="fixed-bg2 mt-5" no-gutters>
       <v-col>
         <v-card
           height="400"
@@ -135,35 +163,13 @@
           dark
           class="d-flex flex-column align-center justify-center"
         >
-          <h1 class="text-h2 font-weight-bold">事業内容</h1>
+          <h1 class="text-h3 font-weight-bold">事業内容</h1>
         </v-card>
       </v-col>
     </v-row>
 
     <v-container grid-list-xs>
-      <!-- <v-row>
-        <v-col>
-          <h1 class="title-h2 text-center">{{ $t('home.buy.title') }}</h1>
-          <v-card max-width="1200" class="mx-auto" flat>
-            <p>{{$t('home.buy.subTitle')}}</p>
-                       <v-row>
-                <v-col cols="12" md="6" class="d-flex flex-column justify-center">
-                    <h2 class="text-h3 text-lg-h3 mt-0 mt-xl-10 font-weight-black">鉄スクラップ
-                    </h2>
-   
-                    <div class="mt-4">
-                        <router-link to="#" class="text-decoration-none font-weight-bold text-h6">詳しくは
-                        </router-link>
-                    </div>
-                </v-col>
-                <v-col cols="12" md="6">
-                    <v-img src="../assets/images/home/tea.jpg" tile class="rounded-lg elevation-6" max-height="480">
-                    </v-img>
-                </v-col>
-            </v-row>
-          </v-card>
-        </v-col>
-      </v-row> -->
+
 
       <v-row>
         <v-col>
@@ -314,18 +320,20 @@
           </v-card>
         </v-col>
       </v-row>
-    </v-container>
+    </v-container> -->
   </div>
 </template>
 
 <script>
 import CarousalHome from "../components/CarouselHome.vue";
+import NavGroup from "../components/NavGroup.vue";
 
 export default {
   name: "home",
 
   components: {
     CarousalHome,
+    NavGroup,
   },
   created() {},
 };
@@ -350,11 +358,13 @@ export default {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .main-container {
   z-index: 3;
+  background-color: rgba(0, 0, 0, 0);
+  filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.8));
 }
 
 .title-h2 {
@@ -384,7 +394,7 @@ export default {
 
 .fixed-bg2 {
   height: 400px;
-  background: url("../assets/images/環球/買取4.jpg");
+  background: url("../assets/images/環球/company_img4.jpg");
   background-attachment: fixed;
   background-size: 100% 100%;
 }

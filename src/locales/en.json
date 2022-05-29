@@ -1,24 +1,26 @@
 {
   "message": "你好 i18n !!",
   "routes": {
-    "home": "home",
-    "productPrice": "product price",
-    "about": "about us",
+    "home": "ホーム",
+    "productPrice": "product",
+    "about": "about",
     "business": "business",
-    "contactUs": "contact us"
+    "contactUs": "contactUs",
+    "group": "group business",
+    "invest": "invest"
   },
-  "home":{
-    "title1":"Creating a world ",
-    "title2":"of trust and peace of mind",
-    "subTitle":"We want to leave a blue planet for our future children. That is our wish.",
-    "buy":{
-      "title":"Purchase support",
-      "subTitle":"We can handle anything that is cycleable. Please feel free to contact us."
+  "home": {
+    "title1": "Creating a world ",
+    "title2": "of trust and peace of mind",
+    "subTitle": "We want to leave a blue planet for our future children. That is our wish.",
+    "buy": {
+      "title": "Purchase support",
+      "subTitle": "We can handle anything that is cycleable. Please feel free to contact us."
     }
   },
 
   "companyProfile": {
-    "title":"companyInfo",
+    "title": "companyInfo",
     "label": {
       "name": "companyName",
       "represenative": "Represenative",
@@ -39,7 +41,7 @@
     }
   },
   "greetings": {
-    "title":"Greeting",
+    "title": "Greeting",
     "subTitle": "To Create Comfortable Society and Revitalize Communities",
     "content": "By reducing waste through non-ferrous metal recycling,we are contributing to the global environment protection,as a company with the advantages for both clients who remove waste and who need resources\nWe will continue to work together as one,striving to be a company loved by clients and communities\nWe will greatly appreciate our supporter"
   },
